@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide Out Men</title>
+    <link href = "https://fonts.googleapis.com/icon?family=Material+Icons" rel = "stylesheet">
+    <link rel="stylesheet" href="slideout.css">
+</head>
+<body>
+    <div class="toggle" id="toggle" onclick="toggle()">
+        <i class="material-icons" id="arrow">
+            chevron_right
+        </i>
+    </div>
+    <div class="menu" id="menu">
+        <a href="#">
+            <i class="material-icons">home</i>
+        </a>
+        <a href="#">
+            <i class="material-icons">message</i>
+        </a>
+        <a href="#">
+            <i class="material-icons">person_add</i>
+        </a>
+        <a href="#">
+            <i class="material-icons">notifications_active</i>
+        </a>
+        <a href="#">
+            <i class="material-icons">search</i>
+        </a>
+    </div>
+    <script type="text/javascript">
+        var i=0;
+        function toggle(){
+            if(i==0){
+                document.getElementById("arrow").style.transform = 'rotate(-180deg)';
+                document.getElementById("menu").style.left='0';
+                i=1;
+            }
+            else{
+               document.getElementById("arrow").style.transform = 'rotate(0deg)';
+               document.getElementById("menu").style.left='-100px';
+               i=0;
+            }
+        }
+    </script>
+</body>
+</html>
