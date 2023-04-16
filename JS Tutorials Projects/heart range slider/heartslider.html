@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Slider</title>
+    <link rel="stylesheet" href="heartslider.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="box">
+<i class="fa fa-heart" aria-hidden="true" id="heart"></i>
+    </div>
+    <div class="container">
+        <input type="range" min="0" max="100" value="50" class="slider" id="slider">
+    </div>
+    <script type="text/javascript">
+        var slider=document.getElementById("slider");
+        var heart=document.getElementById("heart");
+        heart.style.backgroundPosition = '0 '+"-"+slider.value+"px";
+        slider.oninput=function(){
+            heart.style.backgroundPosition = "0 "+"-"+slider.value+"px";
+        }
+
+    </script>
+</body>
+</html>
